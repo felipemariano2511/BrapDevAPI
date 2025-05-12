@@ -15,7 +15,7 @@ function fetchStockData(symbol) {
         throw new Error('Dados de ação inválidos ou ausentes.');
       }
 
-      const changePercent = stock.changePercent ?? 0;
+      const changePercent = regularMarketChangePercent ?? 0;
       const regularMarketPrice = stock.regularMarketPrice ?? 0;
       const variationClass = changePercent > 0 ? 'positive' : 'negative';
 
